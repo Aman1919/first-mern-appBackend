@@ -8,12 +8,14 @@ app.use(cors());
 app.use(routes);
 dotenv.config({ path: "./config.env" });
 
+const PORT = process.env.PORT || 5000;
+
 app.get("/", (req, res) => {
   res.send("<h1>Hello World</h1>");
 });
 
 app.get("/");
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("listening at post 3000");
 });
